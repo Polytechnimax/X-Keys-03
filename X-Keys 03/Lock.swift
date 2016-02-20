@@ -6,4 +6,21 @@
 //  Copyright © 2016 LARCHER Maxime. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Lock : NSObject
+{
+	// MARK: -- Properties
+	var name: String!
+	var image: UIImage!
+	
+	
+	
+	// MARK: -- Initilization
+	init(name: String, image: UIImage)
+	{
+		super.init()
+		self.name = name
+		self.image = image
+	}
+}

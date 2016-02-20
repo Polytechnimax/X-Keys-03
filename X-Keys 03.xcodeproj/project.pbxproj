@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5025DBDD1BEE0F1E00E7951A /* TimePickerManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5025DBDC1BEE0F1E00E7951A /* TimePickerManagementView.swift */; };
+		503A524D1C767F1F0030392F /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A524C1C767F1F0030392F /* Lock.swift */; };
+		503A524F1C76826C0030392F /* LockArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503A524E1C76826C0030392F /* LockArray.swift */; };
+		5059F1B51C767C3C00235BD2 /* LockOpenerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5059F1B41C767C3C00235BD2 /* LockOpenerView.swift */; };
 		506081101C68CB4400A8A4C7 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5060810F1C68CB4400A8A4C7 /* BluetoothManager.swift */; };
 		506495DB1BED0B8E00FBBEBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506495DA1BED0B8E00FBBEBE /* AppDelegate.swift */; };
 		506495E01BED0B8E00FBBEBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506495DE1BED0B8E00FBBEBE /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 
 /* Begin PBXFileReference section */
 		5025DBDC1BEE0F1E00E7951A /* TimePickerManagementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerManagementView.swift; sourceTree = "<group>"; };
+		503A524C1C767F1F0030392F /* Lock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		503A524E1C76826C0030392F /* LockArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockArray.swift; sourceTree = "<group>"; };
+		5059F1B41C767C3C00235BD2 /* LockOpenerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockOpenerView.swift; sourceTree = "<group>"; };
 		5060810F1C68CB4400A8A4C7 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		506495D71BED0B8E00FBBEBE /* X-Keys 03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-Keys 03.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		506495DA1BED0B8E00FBBEBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +198,9 @@
 		50F828181BEF5E9E00104464 /* Door opening */ = {
 			isa = PBXGroup;
 			children = (
+				5059F1B41C767C3C00235BD2 /* LockOpenerView.swift */,
+				503A524E1C76826C0030392F /* LockArray.swift */,
+				503A524C1C767F1F0030392F /* Lock.swift */,
 				5064960E1BED0D2600FBBEBE /* OpenMyDoorView.swift */,
 				5025DBDC1BEE0F1E00E7951A /* TimePickerManagementView.swift */,
 				5096C4311BED601C00D5AE36 /* ClosingDate.swift */,
@@ -354,9 +363,12 @@
 				506495DB1BED0B8E00FBBEBE /* AppDelegate.swift in Sources */,
 				5064960F1BED0D2600FBBEBE /* OpenMyDoorView.swift in Sources */,
 				5025DBDD1BEE0F1E00E7951A /* TimePickerManagementView.swift in Sources */,
+				503A524F1C76826C0030392F /* LockArray.swift in Sources */,
 				506081101C68CB4400A8A4C7 /* BluetoothManager.swift in Sources */,
+				5059F1B51C767C3C00235BD2 /* LockOpenerView.swift in Sources */,
 				5073FC9E1C67B29400726A2C /* HistoryView.swift in Sources */,
 				50F8281B1BEF5F8C00104464 /* Guest.swift in Sources */,
+				503A524D1C767F1F0030392F /* Lock.swift in Sources */,
 				5064960C1BED0BFF00FBBEBE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
