@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HistoryView: UIView
+class HistoryView: UIView, UITableViewDelegate, UITableViewDataSource
 {
     
     
@@ -29,6 +29,8 @@ class HistoryView: UIView
         //Initialise properties
         tableView = UITableView(frame: CGRect(x: 0, y: 64, width: self.bounds.width, height: self.bounds.height))
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "HistoryTableViewCell")
+		tableView.delegate = self
+		tableView.dataSource = self
         self.addSubview(tableView)
 		actionHistory = loadActions()
     }
@@ -36,6 +38,35 @@ class HistoryView: UIView
         fatalError("init(coder:) has not been implemented")
     }
 	
+	
+	// MARK: -- UITableViewDelegate
+	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		return 1
+	}
+	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return actionHistory.actions.count
+	}
+	func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+		return 90
+	}
+	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		let cellIdentifier = "HistoryTableViewCell"
+		let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+		
+		let cellSubviews = cell.subviews
+		for i in cellSubviews
+		{
+			i.removeFromSuperview()
+		}
+		let action = actionHistory.actions[indexPath.row]
+		let label = UILabel(frame: CGRect(x: 10, y: 15, width: cell.bounds.width-50, height: 60))
+		label.numberOfLines = 2
+		label.lineBreakMode = .ByWordWrapping
+		label.text = action.getDetails()
+		cell.addSubview(label)
+		cell.userInteractionEnabled = false
+		return cell
+	}
 	
 	
 	// MARK: -- NSCoding
